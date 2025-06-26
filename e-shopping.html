@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <style>
+     .Nav{
+        background-color: rgb(215, 234, 250);
+        height: 70px;
+        width: 110%;
+        position: relative;
+     }
+     .nav-links{
+        list-style-type: none;
+        display: flex;
+        gap: 60px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 30px;
+        position: absolute;
+        left: 800px;
+        top: 1%;
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+}
+.logo{
+    display: flex;
+    position: absolute;
+    left: 20px;
+    gap: 15px;
+}
+.name{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a:hover{
+    border-bottom: 4px solid  rgb(4, 49, 85) ;
+}
+.intro{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 150px;
+    margin-left: 100px;
+    font-size: 20px;
+    
+}
+
+
+.shop-btn{
+    background-color:  rgb(0, 90, 225);
+    padding: 20px;
+    color: white;
+    border-radius: 30px;
+}
+.shop-home{
+    width: 500px;
+    height: 500px;
+    margin-top: 20px;
+    border-radius: 50%;
+    padding: 20px;
+    margin-right: 100px;
+    
+     
+}
+.new-arrivals{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-decoration: underline rgb(23, 65, 128);
+}
+.shoes{
+    width: 5000px;
+    height: 500px;
+
+}
+.card{
+    width: 300px;
+    height: 450px;
+    box-shadow: 5px 5px 5px 5px rgb(123, 137, 151) ;
+    border-radius: 5%;
+    margin-left: 40px;
+}
+.card img{
+    width: 250px;
+    height: 180px;
+    padding: 20px;
+
+}
+.card h1{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+.card p{
+    opacity: 0.7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    padding-left: 15px;
+}
+.rating{
+    color: gold;
+    padding-left: 15px;
+}
+.buttons{
+    display: flex;
+    gap: 110px;
+    margin-left: 25px;
+}
+.btn1{
+    border: none;
+    background-color: rgb(57, 17, 168);
+    color: white;
+    border-radius: 30px;
+    height: 40px;
+    padding: 10px;
+}
+.btn2{
+    color: white;
+    background-color: rgb(214, 46, 158);
+    border-radius: 30px;
+    height: 40px;
+    padding: 10px;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+     gap: 40px;
+
+}
+.card img:hover{
+      transform: scale(1.1);
+      opacity: 0.8;
+}
+#menu-toggle{
+    display: none;
+}
+.menu-icon{
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-20px);
+    display: none;
+    padding: 10px 0; 
+}
+
+@media(max-width:900px)
+{
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4x 6px rgb(140, 139, 139);
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    #menu-toggle:checked ~ .nav-links{
+        display: flex;
+    }
+} 
+.shop-home img{
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+}
+
+    </style>
+    <body>
+        <header>
+            <div class="Nav">
+            <div  class="logo">
+             <i class="fa-solid fa-bag-shopping" style="color: rgb(0, 90, 225);font-size: 30px; margin-top: 20px;"></i>
+             <p class="name">My Shop</p>
+            </div>
+
+            <input type="checkbox"  id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping" style="color: rgb(0, 90, 225);"></i></a></li>
+            </ul>
+            </div>
+         </header>
+
+         <section style="overflow: auto;">
+             <div class="intro" style="float: left;">
+                <h1 style="font-size: 50px;">Buy Your <span style="color: rgb(9, 65, 170);">Favourites</span></h1>
+                <p>Shop your Dresses,accessories at very lowest price<br> 
+                    in our shop at any time without any worries.</p>
+                    <button class="shop-btn">Shop Now</button>
+             </div>
+             <div style="float: right;">
+                <img src="shopping.jpg" alt="img" class="shop-home">
+             </div>
+         </section>
+         
+         <section>
+            <h1 class="new-arrivals">New Arrivals</h1><br>
+            <div class="grid-container">
+
+
+<!-- 
+        card start -->
+                <div class="card">
+                    <img src="mobile.jpg" alt="shoe" class="shoes">
+                    <h1 style="color: rgb(0, 102, 255);">Poco 50</h1>
+                    <p style="color: rgb(4, 51, 78);">Price:$50</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div><br>
+                    <div class="buttons">
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add to cart</button>
+                    </div>
+                   </div>
+    <!-- card end -->
+<!-- 
+        card start -->
+                <div class="card">
+                    <img src="shirt.jpg" alt="shoe" class="shoes">
+                    <h1 style="color: rgb(0, 102, 255);">T-shirt</h1>
+                    <p style="color: rgb(4, 51, 78);">Price:$50</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div><br>
+                    <div class="buttons">
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add to cart</button>
+                    </div>
+                   </div>
+    <!-- card end -->
+<!-- 
+        card start -->
+                <div class="card">
+                    <img src="ring.jpg" alt="shoe" class="shoes">
+                    <h1 style="color: rgb(0, 102, 255);">girls ring</h1>
+                    <p style="color: rgb(4, 51, 78);">Price:$50</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div><br>
+                    <div class="buttons">
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add to cart</button>
+                    </div>
+                   </div>
+    <!-- card end -->
+<!-- 
+        card start -->
+                <div class="card">
+                    <img src="bangles.jpg" alt="shoe" class="shoes">
+                    <h1 style="color: rgb(0, 102, 255);">Bangles</h1>
+                    <p style="color: rgb(4, 51, 78);">Price:$50</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div><br>
+                    <div class="buttons">
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add to cart</button>
+                    </div>
+                   </div>
+    <!-- card end -->
+<!-- 
+        card start -->
+                <div class="card">
+                    <img src="nail.jpg" alt="shoe" class="shoes">
+                    <h1 style="color: rgb(0, 102, 255);">Nail Polish</h1>
+                    <p style="color: rgb(4, 51, 78);">Price:$50</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div><br>
+                    <div class="buttons">
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add to cart</button>
+                    </div>
+                   </div>
+    <!-- card end -->
+<!-- 
+        card start -->
+                <div class="card">
+                    <img src="lehan.jpg" alt="shoe" class="shoes">
+                    <h1 style="color: rgb(0, 102, 255);">Leganha</h1>
+                    <p style="color: rgb(4, 51, 78);">Price:$100</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div><br>
+                    <div class="buttons">
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add to cart</button>
+                    </div>
+                   </div>
+    <!-- card end -->
+<!-- 
+        card start -->
+                <div class="card">
+                    <img src="slipper.jpg" alt="shoe" class="shoes">
+                    <h1 style="color: rgb(0, 102, 255);">Slipper</h1>
+                    <p style="color: rgb(4, 51, 78);">Price:$80</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div><br>
+                    <div class="buttons">
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add to cart</button>
+                    </div>
+                   </div>
+    <!-- card end -->
+<!-- 
+        card start -->
+                <div class="card">
+                    <img src="shoe.jpg" alt="shoe" class="shoes">
+                    <h1 style="color: rgb(0, 102, 255);">Trendy Nike Shoes</h1>
+                    <p style="color: rgb(4, 51, 78);">Price:$90</p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div><br>
+                    <div class="buttons">
+                        <button class="btn1">Buy Now</button>
+                        <button class="btn2">Add to cart</button>
+                    </div>
+                   </div>
+    <!-- card end -->
+
+    <!-- card start  -->
+    <div class="card">
+        <img src="lipstick.jpg" alt="shoe" class="shoes">
+        <h1 style="color: rgb(0, 102, 255);">Lipstick</h1>
+        <p style="color: rgb(4, 51, 78);">Price:$50</p>
+        <div class="rating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+        </div><br>
+        <div class="buttons">
+            <button class="btn1">Buy Now</button>
+            <button class="btn2">Add to cart</button>
+        </div>
+       </div>
+<!-- card end -->
+
+<!-- card start -->
+<div class="card">
+    <img src="makeup.jpg" alt="shoe" class="shoes">
+    <h1 style="color: rgb(0, 102, 255);">Concealer</h1>
+    <p style="color: rgb(4, 51, 78);">Price:$60</p>
+    <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+    </div><br>
+    <div class="buttons">
+        <button class="btn1">Buy Now</button>
+        <button class="btn2">Add to cart</button>
+    </div>
+   </div>
+<!-- card end -->
+
+<!-- card start  -->
+<div class="card">
+    <img src="glass.jpg" alt="shoe" class="shoes">
+    <h1 style="color: rgb(0, 102, 255);">Flair glass</h1>
+    <p style="color: rgb(4, 51, 78);">Price:$50</p>
+    <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+    </div><br>
+    <div class="buttons">
+        <button class="btn1">Buy Now</button>
+        <button class="btn2">Add to cart</button>
+    </div>
+   </div>
+<!-- card end -->
+
+<!-- card start  -->
+<div class="card">
+    <img src="kurta.jpg" alt="shoe" class="shoes">
+    <h1 style="color: rgb(0, 102, 255);">kurta</h1>
+    <p style="color: rgb(4, 51, 78);">Price:$80</p>
+    <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+    </div><br>
+    <div class="buttons">
+        <button class="btn1">Buy Now</button>
+        <button class="btn2">Add to cart</button>
+    </div>
+   </div>
+<!-- card end -->
+<div class="card">
+    <img src="mirror.jpg" alt="shoe" class="shoes">
+    <h1 style="color: rgb(0, 102, 255);">Mirror</h1>
+    <p style="color: rgb(4, 51, 78);">Price:$80</p>
+    <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+    </div><br>
+    <div class="buttons">
+        <button class="btn1">Buy Now</button>
+        <button class="btn2">Add to cart</button>
+    </div>
+   </div>
+   <div class="card">
+    <img src="shirt.jpg" alt="shoe" class="shoes">
+    <h1 style="color: rgb(0, 102, 255);">Men Shirt</h1>
+    <p style="color: rgb(4, 51, 78);">Price:$80</p>
+    <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+    </div><br>
+    <div class="buttons">
+        <button class="btn1">Buy Now</button>
+        <button class="btn2">Add to cart</button>
+    </div>
+   </div>
+   <div class="card">
+    <img src="combo.jpg" alt="shoe" class="shoes">
+    <h1 style="color: rgb(0, 102, 255);">Combo Kit</h1>
+    <p style="color: rgb(4, 51, 78);">Price:$80</p>
+    <div class="rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+    </div><br>
+    <div class="buttons">
+        <button class="btn1">Buy Now</button>
+        <button class="btn2">Add to cart</button>
+    </div>
+   </div>
+
+    
+        
+    
+</body>
+</html>
